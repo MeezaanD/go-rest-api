@@ -1,0 +1,98 @@
+[
+	{
+		"ID": "1",
+		"Brand": "BMW",
+		"Name": "M3",
+		"Type": "car",
+		"Image": "bleh.png",
+		"Price": 150000
+	},
+	{
+		"ID": "2",
+		"Brand": "Toyota",
+		"Name": "Camry",
+		"Type": "sedan",
+		"Image": "car_image_2.png",
+		"Price": 30000
+	},
+	{
+		"ID": "3",
+		"Brand": "Honda",
+		"Name": "Civic",
+		"Type": "sedan",
+		"Image": "car_image_3.png",
+		"Price": 25000
+	},
+	{
+		"ID": "4",
+		"Brand": "Ford",
+		"Name": "F-150",
+		"Type": "truck",
+		"Image": "truck_image_4.png",
+		"Price": 40000
+	},
+	{
+		"ID": "5",
+		"Brand": "Chevrolet",
+		"Name": "Tahoe",
+		"Type": "SUV",
+		"Image": "suv_image_5.png",
+		"Price": 50000
+	},
+	{
+		"ID": "6",
+		"Brand": "Tesla",
+		"Name": "Model S",
+		"Type": "electric car",
+		"Image": "electric_car_image_6.png",
+		"Price": 80000
+	},
+	{
+		"ID": "7",
+		"Brand": "Audi",
+		"Name": "Q5",
+		"Type": "SUV",
+		"Image": "suv_image_7.png",
+		"Price": 55000
+	},
+	{
+		"ID": "8",
+		"Brand": "Mercedes-Benz",
+		"Name": "GLE",
+		"Type": "SUV",
+		"Image": "suv_image_8.png",
+		"Price": 60000
+	},
+	{
+		"ID": "9",
+		"Brand": "Jeep",
+		"Name": "Wrangler",
+		"Type": "SUV",
+		"Image": "suv_image_9.png",
+		"Price": 35000
+	},
+	{
+		"ID": "10",
+		"Brand": "Nissan",
+		"Name": "Altima",
+		"Type": "sedan",
+		"Image": "car_image_10.png",
+		"Price": 28000
+	},
+	{
+		"ID": "11",
+		"Brand": "Porsche",
+		"Name": "911",
+		"Type": "car",
+		"Image": "car_image_11.png",
+		"Price": 120000
+	},
+	{
+		"ID": "12",
+		"Brand": "Subaru",
+		"Name": "Outback",
+		"Type": "wagon",
+		"Image": "wagon_image_12.png",
+		"Price": 35000
+	}
+]
