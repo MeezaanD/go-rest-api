@@ -5,6 +5,7 @@ import (
 	"io/ioutil"
 	"net/http"
 
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )
 
@@ -30,8 +31,12 @@ func main() {
 	router.POST("/vehicle", addVehicle)
 	router.PUT("/vehicles/:id", updateVehicleByID)
 	router.DELETE("/vehicle/:id", removeVehicleByID)
-
 	router.Run("localhost:5000")
+	
+	config := cors.DefaultConfig()
+	config.AllowOrigins = []string{"http://localhost:5173"} 
+
+	router.Use(cors.New(config))
 }
 
 func retrieveData() error {
