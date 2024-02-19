@@ -9,16 +9,16 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-type Vehicle struct {
-	ID    string  `json:"id"`
-	Brand string  `json:"brand"`
-	Name  string  `json:"Name"`
-	Type  string  `json:"type"`
-	Image string  `json:"image"`
-	Price float64 `json:"price"`
+type Book struct {
+	ID     string  `json:"id"`
+	Genre  string  `json:"genre"`
+	Name   string  `json:"name"`
+	Author string  `json:"author"`
+	Image  string  `json:"image"`
+	Price  float64 `json:"price"`
 }
 
-var vehicles []Vehicle
+var books []Book
 
 func main() {
 	if err := retrieveData(); err != nil {
@@ -26,90 +26,90 @@ func main() {
 	}
 
 	router := gin.Default()
-	router.GET("/vehicles", getVehicles)
-	router.GET("/vehicles/:id", getVehicleByID)
-	router.POST("/vehicle", addVehicle)
-	router.PUT("/vehicles/:id", updateVehicleByID)
-	router.DELETE("/vehicle/:id", removeVehicleByID)
+	router.GET("/books", getBooks)
+	router.GET("/books/:id", getBookByID)
+	router.POST("/book", addBook)
+	router.PUT("/books/:id", updateBookByID)
+	router.DELETE("/book/:id", removeBookByID)
 	router.Run("localhost:5000")
-	
+
 	config := cors.DefaultConfig()
-	config.AllowOrigins = []string{"http://localhost:5173"} 
+	config.AllowOrigins = []string{"http://localhost:5173"}
 
 	router.Use(cors.New(config))
 }
 
 func retrieveData() error {
-	data, err := ioutil.ReadFile("vehicles.json")
+	data, err := ioutil.ReadFile("books.json")
 	if err != nil {
 		return err
 	}
-	if err := json.Unmarshal(data, &vehicles); err != nil {
+	if err := json.Unmarshal(data, &books); err != nil {
 		return err
 	}
 	return nil
 }
 
-func getVehicles(c *gin.Context) {
+func getBooks(c *gin.Context) {
 	response := struct {
-		Status   string    `json:"status"`
-		Message  string    `json:"message"`
-		Vehicles []Vehicle `json:"vehicles"`
+		Status  string `json:"status"`
+		Message string `json:"message"`
+		Books   []Book `json:"books"`
 	}{
-		Status:   "success",
-		Message:  "List of Vehicles",
-		Vehicles: vehicles,
+		Status:  "success",
+		Message: "List of books",
+		Books:   books,
 	}
 	c.IndentedJSON(http.StatusOK, response)
 }
 
-func getVehicleByID(c *gin.Context) {
+func getBookByID(c *gin.Context) {
 	id := c.Param("id")
 
-	for _, a := range vehicles {
+	for _, a := range books {
 		if a.ID == id {
 			c.IndentedJSON(http.StatusOK, a)
 			return
 		}
 	}
-	c.IndentedJSON(http.StatusNotFound, gin.H{"message": "this vehicle could not be found"})
+	c.IndentedJSON(http.StatusNotFound, gin.H{"message": "this book could not be found"})
 }
 
-func addVehicle(c *gin.Context) {
-	var newVehicle Vehicle
+func addBook(c *gin.Context) {
+	var newBook Book
 
-	if err := c.BindJSON(&newVehicle); err != nil {
+	if err := c.BindJSON(&newBook); err != nil {
 		return
 	}
 
-	vehicles = append(vehicles, newVehicle)
-	c.IndentedJSON(http.StatusCreated, newVehicle)
+	books = append(books, newBook)
+	c.IndentedJSON(http.StatusCreated, newBook)
 }
 
-func updateVehicleByID(c *gin.Context) {
+func updateBookByID(c *gin.Context) {
 	id := c.Param("id")
 
-	for i, a := range vehicles {
+	for i, a := range books {
 		if a.ID == id {
-			if err := c.BindJSON(&vehicles[i]); err != nil {
+			if err := c.BindJSON(&books[i]); err != nil {
 				return
 			}
-			c.IndentedJSON(http.StatusOK, vehicles[i])
+			c.IndentedJSON(http.StatusOK, books[i])
 			return
 		}
 	}
-	c.IndentedJSON(http.StatusNotFound, gin.H{"message": "this vehicle could not be updated"})
+	c.IndentedJSON(http.StatusNotFound, gin.H{"message": "this book could not be updated"})
 }
 
-func removeVehicleByID(c *gin.Context) {
+func removeBookByID(c *gin.Context) {
 	id := c.Param("id")
 
-	for i, a := range vehicles {
+	for i, a := range books {
 		if a.ID == id {
-			vehicles = append(vehicles[:i], vehicles[i+1:]...)
-			c.IndentedJSON(http.StatusOK, gin.H{"message": "vehicle successfully removed"})
+			books = append(books[:i], books[i+1:]...)
+			c.IndentedJSON(http.StatusOK, gin.H{"message": "book successfully removed"})
 			return
 		}
 	}
-	c.IndentedJSON(http.StatusNotFound, gin.H{"message": "this vehicle could not be removed"})
+	c.IndentedJSON(http.StatusNotFound, gin.H{"message": "this book could not be removed"})
 }

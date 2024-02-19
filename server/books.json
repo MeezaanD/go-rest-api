@@ -1,0 +1,202 @@
+[
+	{
+		"ID": "1",
+		"Genre": "Mystery",
+		"Name": "The Da Vinci Code",
+		"Author": "Dan Brown",
+		"Image": "",
+		"Price": 25
+	},
+	{
+		"ID": "2",
+		"Genre": "Fantasy",
+		"Name": "Harry Potter and the Sorcerer's Stone",
+		"Author": "J.K. Rowling",
+		"Image": "",
+		"Price": 20
+	},
+	{
+		"ID": "3",
+		"Genre": "Science Fiction",
+		"Name": "Dune",
+		"Author": "Frank Herbert",
+		"Image": "",
+		"Price": 18
+	},
+	{
+		"ID": "4",
+		"Genre": "Romance",
+		"Name": "Pride and Prejudice",
+		"Author": "Jane Austen",
+		"Image": "",
+		"Price": 15
+	},
+	{
+		"ID": "5",
+		"Genre": "Historical Fiction",
+		"Name": "The Pillars of the Earth",
+		"Author": "Ken Follett",
+		"Image": "",
+		"Price": 22
+	},
+	{
+		"ID": "6",
+		"Genre": "Thriller",
+		"Name": "The Girl with the Dragon Tattoo",
+		"Author": "Stieg Larsson",
+		"Image": "",
+		"Price": 21
+	},
+	{
+		"ID": "7",
+		"Genre": "Horror",
+		"Name": "It",
+		"Author": "Stephen King",
+		"Image": "",
+		"Price": 19
+	},
+	{
+		"ID": "8",
+		"Genre": "Dystopian",
+		"Name": "1984",
+		"Author": "George Orwell",
+		"Image": "",
+		"Price": 17
+	},
+	{
+		"ID": "9",
+		"Genre": "Adventure",
+		"Name": "The Hobbit",
+		"Author": "J.R.R. Tolkien",
+		"Image": "",
+		"Price": 23
+	},
+	{
+		"ID": "10",
+		"Genre": "Crime",
+		"Name": "The Godfather",
+		"Author": "Mario Puzo",
+		"Image": "",
+		"Price": 26
+	},
+	{
+		"ID": "11",
+		"Genre": "Comedy",
+		"Name": "Catch-22",
+		"Author": "Joseph Heller",
+		"Image": "",
+		"Price": 16
+	},
+	{
+		"ID": "12",
+		"Genre": "Science Fiction",
+		"Name": "Neuromancer",
+		"Author": "William Gibson",
+		"Image": "",
+		"Price": 20
+	},
+	{
+		"ID": "13",
+		"Genre": "Historical Fiction",
+		"Name": "The Book Thief",
+		"Author": "Markus Zusak",
+		"Image": "",
+		"Price": 24
+	},
+	{
+		"ID": "14",
+		"Genre": "Mystery",
+		"Name": "Gone Girl",
+		"Author": "Gillian Flynn",
+		"Image": "",
+		"Price": 18
+	},
+	{
+		"ID": "15",
+		"Genre": "Fantasy",
+		"Name": "The Lord of the Rings",
+		"Author": "J.R.R. Tolkien",
+		"Image": "",
+		"Price": 28
+	},
+	{
+		"ID": "16",
+		"Genre": "Romance",
+		"Name": "Outlander",
+		"Author": "Diana Gabaldon",
+		"Image": "",
+		"Price": 27
+	},
+	{
+		"ID": "17",
+		"Genre": "Thriller",
+		"Name": "The Silence of the Lambs",
+		"Author": "Thomas Harris",
+		"Image": "",
+		"Price": 22
+	},
+	{
+		"ID": "18",
+		"Genre": "Science Fiction",
+		"Name": "Ender's Game",
+		"Author": "Orson Scott Card",
+		"Image": "",
+		"Price": 19
+	},
+	{
+		"ID": "19",
+		"Genre": "Historical Fiction",
+		"Name": "All the Light We Cannot See",
+		"Author": "Anthony Doerr",
+		"Image": "",
+		"Price": 26
+	},
+	{
+		"ID": "20",
+		"Genre": "Horror",
+		"Name": "The Shining",
+		"Author": "Stephen King",
+		"Image": "",
+		"Price": 20
+	},
+	{
+		"ID": "21",
+		"Genre": "Dystopian",
+		"Name": "Brave New World",
+		"Author": "Aldous Huxley",
+		"Image": "",
+		"Price": 21
+	},
+	{
+		"ID": "22",
+		"Genre": "Adventure",
+		"Name": "Treasure Island",
+		"Author": "Robert Louis Stevenson",
+		"Image": "",
+		"Price": 15
+	},
+	{
+		"ID": "23",
+		"Genre": "Crime",
+		"Name": "The Girl on the Train",
+		"Author": "Paula Hawkins",
+		"Image": "",
+		"Price": 17
+	},
+	{
+		"ID": "24",
+		"Genre": "Comedy",
+		"Name": "Good Omens",
+		"Author": "Neil Gaiman and Terry Pratchett",
+		"Image": "",
+		"Price": 25
+	},
+	{
+		"ID": "25",
+		"Genre": "Science Fiction",
+		"Name": "Snow Crash",
+		"Author": "Neal Stephenson",
+		"Image": "",
+		"Price": 24
+	}
+]
